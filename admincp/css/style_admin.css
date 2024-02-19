@@ -1,0 +1,149 @@
+/* Header */
+.custom-navbar {
+    height: 90px;
+    margin-bottom: 90px;    
+    padding: auto;
+    border-radius: 0;
+}
+
+.custom-navbar .navbar-brand {
+    position: absolute;                 /*Canh lề logo ra giữa*/
+    left: 50%;          
+    transform: translateX(-50%); 
+}
+
+.custom-navbar .navbar-brand img {
+    height: 77px;                       /*Điều chỉnh kích thước logo*/
+    width: auto; 
+    max-width: 100%; 
+    margin-top: -10px;
+}
+
+/* Trang Chủ */
+.manager h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 120px;
+}
+
+#productList{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#productList td, #productList th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#productList tr:nth-child(even){background-color: #f2f2f2;}
+#productList tr:hover {background-color: #ddd;}
+#productList th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #aa0404;
+    color: white;
+
+}
+
+button{
+    padding: 8px 16px;
+}
+
+button a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+}
+
+button a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+/* món ăn */
+.add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Đảm bảo div có chiều cao bằng chiều cao của màn hình */
+}
+
+.add h2{
+    text-align: center;
+    font-weight: bold;
+}
+  
+.add form {
+    width: 600px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.add #product_update{
+    padding-top: 0px;
+    margin-top: 300px;
+}
+
+.add #product_add{
+    padding-top: 0px;
+    margin-top: 100px;
+}
+
+.add div{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.add label{
+    width: 100px;
+}
+
+.add input,textarea{
+    flex: 1;
+}
+
+.button1{
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    background-color: #af4c4c;
+    color: white;
+    padding: 6px 12px;
+    margin: 14px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.button1:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #a04545;
+}
+
+button[type=submit] {
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    background-color: #af4c4c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+button[type=submit]:hover {
+    background-color: #a04545;
+}

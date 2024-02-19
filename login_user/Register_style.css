@@ -1,0 +1,335 @@
+/* Giúp tránh việc phần tử bị tràn ra khỏi khu vực được chỉ định do ảnh hưởng của viền và padding. */
+*{
+    box-sizing: border-box;
+}
+
+body{   
+   /* Thiết lập ảnh cho backgroud  */
+   /* background-image: url(FastFood.jpg); */
+   /* Không cho ảnh nền được lặp lại */
+   background-repeat: no-repeat;
+   /* Làm cho ảnh bao quanh trang web */
+   background-size: cover;
+   /* Làm ảnh vừa vặt hơn với web */
+   background-attachment: fixed;
+   
+ 
+ 
+   /* Thiết lập vị trí canh giữa cho sign in form */
+        /* Sử dụng phương pháp flexbox  */
+        display: flex;
+        /* Đặt các phần tử ở giữa trang */
+        align-items: center;
+        /* Đặt nội dung ở giữa trang web theo chiều Ox */
+        justify-content: center;
+        /* Bỏ các margin xung quanh của sign in form  */
+        margin: 0;
+        /* Đẩy form xuống theo trục Oyx 100vh */
+        min-height: 100vh;
+        /* Tạo kiểu chữ các từ trong form  */   
+        font-family: 'Open Sans', sans-serif;
+}
+
+/* Định dạng cho toàn bộ form sign in */
+.sign_in{
+    /* Tạo màu nền cho form sign in */
+    background-color: white;
+    /* Tạo bo tròn xung quanh cho form */
+    border-radius: 5px;
+    /* Tạo respovesive cho kích cho form với kích thước màn hình lớn */
+    max-width: 400px;
+    max-width: 100%;
+    /* Tăng bề ngang cho form */
+    width: 400px;
+    /* Tạo bóng cho form */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* Định dạng cho thẻ cha bao quanh thẻ header */
+.header {
+    /* Tạo boder xung quanh form  */
+    border-bottom: 1px solid #f0f0f0;
+    /* Tạo màu nền cho thẻ header */
+	background-color: #f7f7f7;
+    /* Chỉnh tòa độ cách top: 20 */
+	padding: 20px 40px;
+}
+/*  Định dạng cho thông số của tiêu đề bên trong thẻ header */
+.header h2{
+    /* Chỉnh margin về = 0 cho chữ tiêu đề để không làm lệch k/c với viền xung quanh */
+    margin: 0;
+}
+
+/* Định dạng cho form bao quanh các input */
+.form{
+    /* Chỉnh kích thước cho các phần tử input so với các viền form xung quanh nó  */
+    padding: 30px 40px;
+}
+
+/* Định dạng cho tất cả các input cùng 1 lúc do có cùng 1 tên như nhau */
+.form-control{
+    /* Tạo khoảng trống cho các input ở phía dưới để ta có thể thêm các thông báo và canh k/c cho chúng */
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    /* Đặt phần tử cha */
+    position: relative;
+}
+/* Định dạng cho các label bên trong thẻ cha bao quanh input */
+
+.form-control label{
+    /* Do label là t/c block nên ta dùng inline-block để nó ngang hàng nhau */
+    /* Chưa kể do inline-block cho phép ta dùng được Margin  */
+    display: inline-block;
+    margin-bottom:5px;
+}
+/* Định dạng các input  => Input cho user nhìn */
+.form-control input{
+    border: 2px solid #f0f0f0; 
+    border: 1px solid black;
+    
+    border-radius: 4px ;
+    /* Xếp cho từng input chỉ chiếm 1 dòng thôi */
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    font-family: inherit; 
+     /* Tạo hiệu ứng độ sâu */
+     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  
+    /* Tạo màu nền trắng nhạt */
+    background-color: #ffffff;
+
+}
+/* .form-control input.error {
+    border-color: red; 
+} */
+
+
+
+/* Định dạng icon */
+.form-control i{
+    /* Gán phần tử con vào bên trong Input cha */
+    position: absolute;
+    top:35px;
+    right:10px;
+    visibility: hidden;
+
+}
+/* Dịnh dạng cho nút thông báo small  */
+.form-control small{
+    position: absolute;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+}
+
+.form button{
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    /* Chỉnh cho button này chiếm hết 1 dòng */
+    /* Làm cho nó có thể chỉnh được margin và padding xung quanh nó */
+    display: block;
+    padding: 10px;
+    /* Chỉnh chiều ngang chiếm hết 1 hàng */
+    width: 100%;
+    /* Chỉnh độ to cho phông chữ */
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /*  */
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+/* Khi nút được di chuyển chuột vào */
+.form button:hover{
+    /* Tạo đổ bóng cho nút */
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    /* Làm cho nút nổi như 3d */
+    transform: translateY(-2px) scale(1.05);
+
+}
+
+
+/* Tạo các bước định dạng cho phần icon -> Chuận bị cho java */
+.form-control.success input{
+    /* Nếu thành công thì hiện màu xanh  */
+    border-color:  greenyellow;
+}
+     /* Nếu có lỗi thì hiện màu đỏ  */
+.form-control.error input{
+    border-color:red ;
+}
+    /* Nếu thành công thì icon check sẽ được hiện thị */
+.form-control.success i.fa-check-circle{
+    color: greenyellow;
+    visibility: visible;
+}
+ 
+    /* Nếu có lỗi thì icon check sẽ được hiện ra */
+.form-control.error i.fa-exclamation-circle{
+        color: red;
+        visibility: visible;
+    }
+
+
+    /* Nếu thành công thì bảng thông báo không cần hiện thị làm gì => Đây là mấu chốt */
+.form-control small{
+    visibility: visible;
+
+    
+}
+
+
+
+
+    /* Nếu không thành công thì cần phải đưa bảng thông báo ra*/ 
+.form-control.error small{
+    visibility: visible;
+    
+}
+
+.sign_in{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.3);
+    /* Tạo hiệu ứng bo tròn cho vật thể */
+    border-radius: 2%;
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
+
+
+
+ 
+/* Thiết lập kích thước và vị trí cho phần đăng nhập trên màn hình điện thoại */
+@media screen and (max-width: 480px) {
+    /* Thiết lập kích thước của phần đăng nhập */
+    .signin {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    /* Thiết lập vị trí của phần đăng nhập */
+    .signinform {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+/* Dưới đây là phần tạo reponsive cho trang website */
+
+/* Thiết lập kích thước và vị trí cho phần đăng nhập trên màn hình điện thoại */
+@media screen and (max-width: 480px) {
+    /* Thiết lập kích thước của phần đăng nhập */
+    .sign_in {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Thiết lập vị trí của phần đăng nhập */
+    .form {
+        padding: 20px;
+    }
+}
+
+/* Thiết lập kích thước và vị trí cho phần đăng nhập trên iPhone SE */
+@media screen and (max-width: 375px) {
+    /* Thiết lập kích thước của phần đăng nhập */
+    .sign_in {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Thiết lập vị trí của phần đăng nhập */
+    .form {
+        padding: 10px;
+    }
+}
+/* Cách reposnive cho màn hình  */
+@media(max-width: 600px){
+    .container{
+        min-width: 280px;
+    }
+
+    .user-input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .user-input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-user-info{
+        max-height: 380px;
+        overflow: auto;
+    }
+
+    .main-user-info::-webkit-scrollbar{
+        width: 0;
+    }
+}   
+
+
+/* Định dạng cho các ô Input => Trách việc nó bị lỗi màu khi đổi màn hình */
+input[type="text"]:focus {
+    /* Loại bỏ outline default của input này */
+    outline: none;
+    /* Bao quanh nó bởi 1 lớp màu đen */
+    border-color: black;
+  }
+  input[type="password"]:focus {
+    outline: none;
+    border-color: black;
+}
+
+/* Định dạng cho thẻ qua Login và Home */
+.Login{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+ 
+}
+.TrangChu{
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+}
+
+.TrangChu:hover{
+    color: rgb(0, 47, 255);
+}
+
+.Login:hover{
+    color: rgb(0, 47, 255);
+}
+
+.CardTurnHome{
+    /* margin: 0; */
+    padding-bottom: 10px;
+    display: block;
+    
+}
+
+
+

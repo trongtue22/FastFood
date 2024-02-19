@@ -1,0 +1,140 @@
+body {
+    position: relative;
+}
+
+/* Menu */
+.custom-navbar {
+    height: 90px;
+    margin-bottom: 90px;    
+    padding: auto;
+    border-radius: 0;
+}
+
+.custom-navbar .under-navbar img {
+    height: 180px;                      /*Điều chỉnh kích thước menu*/
+    width: auto; 
+    max-width: 100%; 
+    margin-top: -5px;
+    margin-left: 60px;
+    position: absolute;
+}
+
+.under-navbar {
+    transition: opacity 0.3s ease-in-out;
+}                                       /*Hiệu ứng biến mất menu khi cuộn chuột*/
+.hide-menu {
+    opacity: 0;
+}
+
+.custom-navbar .navbar-brand {
+    position: absolute;                 /*Canh lề logo ra giữa*/
+    left: 50%;          
+    transform: translateX(-50%); 
+}
+
+.custom-navbar .navbar-brand img {
+    height: 77px;                       /*Điều chỉnh kích thước logo*/
+    width: auto; 
+    max-width: 100%; 
+    margin-top: -10px;
+}
+
+.custom-navbar .navbar-right{           /*Canh lề icon ở phần navbar-right*/
+    margin-right: 80px;
+}
+
+.custom-navbar .navbar-right .glyphicon {
+    font-size: 35px;                    /* Phóng to icon ở phần navbar-right */
+    line-height: 55px; 
+}
+
+/* Danh mục món ăn */
+.custom-navbar-2 .navbar-nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.custom-navbar-2 .navbar-collapse > ul {
+    font-size: 20px;                    
+    font-weight: bold;
+}
+
+.affix {
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+#section {height:600px; }
+
+
+/* Main */
+.container{
+    margin-top: 40px;
+}
+
+.container-2{
+    margin: 180px 80px 0px;
+}
+
+.title-main {                           
+    text-align: center;                       /*Tên tiêu đề*/
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+ul.product {
+    margin: 0;                                 /*Chỉnh lề cho khung món ăn*/
+    padding: 0;                 
+    list-style: none;
+    width: 100%;
+}
+
+ul.product li {
+    width: 20%; 
+    padding: 15px;
+    margin: 28.65px;  
+    color: black;                             /*Tạo khung món ăn*/
+    border: 1px solid #ccc!important;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    float: left;
+}
+
+ul.product li img {                             
+    max-width: 100%;                                    /*Chỉnh hình ảnh món ăn*/
+    max-height: 150px; 
+    object-fit: cover;                              
+    margin-bottom: 35px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+ul.product li img:hover {                             
+    transform: scale(1.11);
+}
+
+.product li a p:hover {
+    text-decoration: none;
+}
+
+ul.product li p {   
+    color: black;                                
+    font-size: 16px;                            /*Chỉnh tên và giá món ăn*/    
+    font-weight: bold;
+}
+
+
+/* Footer */
+.custom-footer {
+    background: #202124;
+    color: #ababab;
+    padding: 32px 0; /* Tùy chỉnh padding cho khoảng cách lề của footer */
+}
+  
+.custom-footer p {
+    margin-bottom: 0; /* Loại bỏ margin dưới của đoạn văn bản để nó không tạo khoảng trống dư thừa */
+}
+  

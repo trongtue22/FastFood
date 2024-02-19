@@ -1,0 +1,197 @@
+ 
+ *{
+    /* Cài đặt cho t */
+    padding:0;
+    margin: 0;
+   
+    box-sizing: border-box;
+ }
+/* Nút */
+#button{
+    background-color: red;
+    
+      border-color: transparent;
+    
+    
+   
+}
+/* Tạo nền cho nút khi có con trỏ chuột lướt qua */
+#button:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px) scale(1.05);
+  }
+
+body{
+    /* Cài đặt thuộc hình ảnh có backgroud */
+    /* background-image: url(FastFood.jpg); */
+    /* Cho kích thước bao toàn trang web */ 
+    background-size: cover;
+    /* Tắt chế độ lặp lại ảnh nền */
+    background-repeat: no-repeat;
+    /* Làm cho ảnh nền reponsive với mọi kích thước màn hình */
+    background-attachment: fixed;
+
+    
+ }
+/* Tạo kiểu cho phần login */
+ .loginform{
+    /* Tô màu cho phần login xung quanh toàn màu trắng */
+    background-color: white;
+    
+    /* Chỉnh reposinve cho login form để tương thích với màn hình cỡ lớn  */
+    max-width: 400px;
+    /* Chi */
+    width: 90%;
+    /* Chiều dài auto */
+    height: auto;
+    border-radius: 5px;
+    margin: 7% auto;
+    /* Tòa độ mà phần Login nằm trên trang web  */
+    padding: 25px 10px;   
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    /*  */
+    background-image: linear-gradient(#FFFFFF, #EDEDED);
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: h-offset v-offset blur spread color;
+ }
+
+ /* Tạo hiệu ứng box-shadow khu user di chuyển chuột vào */
+ .loginform:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow:
+  0 0 10px rgba(0, 0, 0, 0.5),
+  0 0 20px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.MatKhau input[type="password"] {
+  padding-right: 50px;
+}
+
+
+/* Chỉnh reposive cho phần LOGIN */
+ @media screen and (max-width:600px)
+ {
+       .loginform {
+        width: 90% ;
+        margin: 35% auto;
+
+       }
+}
+
+.DangKy{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+ 
+}
+.TrangChu{
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+}
+
+/* Thẻ cha bao xung quanh ô Input mật khẩu */
+.MatKhau{
+    /* Cài làm thuộc tính cha vì MatKhau ( eyes-icon ) */
+    position: relative;
+}
+
+/* Chỉnh cho icon nhảy vào bên trong password input */
+.fa-eye{
+  position: absolute;
+  top:7px;
+  right: 25px;
+  transform: translateY(-50%);
+  margin-right: 10px; 
+ 
+
+}
+
+/* Chỉnh cho icon nhảy vào bên trong password input */
+.MatKhau .fa-eye{
+  position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left:-30px; 
+}
+
+/* Tạo reponsive cho nút Icon-eyes */
+@media (max-width: 576px) {
+  .MatKhau .fa-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 576px) {
+  .MatKhau .fa-eye {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    transform: translateY(-50%);
+  }
+  }
+/* Tạo reponsive cho màn hình cỡ lớn */
+  @media (max-width: 768px) 
+  {
+  .toggle-password-button {
+    font-size: 16px;
+  }
+  .toggle-password-button img {
+    width: 20px;
+  }
+  .hide #closed-eye {
+    display: none;
+  }
+  .hide #open-eye {
+    display: inline-block;
+  }
+}
+.toggle-password-button {
+  font-size: 24px;
+}
+
+.toggle-password-button .fa-eye-slash {
+  font-size: 16px;
+}
+
+
+
+/*  */
+
+@media(max-width: 600px){
+  .container{
+      min-width: 280px;
+  }
+
+  .user-input-box{
+      margin-bottom: 12px;
+      width: 100%;
+  }
+
+  .user-input-box:nth-child(2n){
+      justify-content: space-between;
+  }
+
+  .gender-category{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .main-user-info{
+      max-height: 380px;
+      overflow: auto;
+  }
+
+  .main-user-info::-webkit-scrollbar{
+      width: 0;
+  }
+}
+
